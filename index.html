@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-9ieyakQJbERG6mJU6AONP8FbF6p0LCO/LbP6JWJKC8wv0M2yxSrvhN/vdAaX8Nv+o3/4oF4PrLWZzl8w+adO3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./images/Arun logo.png" class="logo">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#">contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Devloper / Designer</p>
+                <h1>Hi,I'm <span>Arun</span> <br>from Jharkhand</h1>
+            </div>
+           
+    </div>
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/arun.jpg.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia ipsa voluptatum labore impedit officiis. Aspernatur, ea animi. Quisquam totam velit dolorem eligendi reiciendis voluptatibus? Alias iste deserunt, asperiores officiis magnam corporis repellendus quae fuga velit porro, eligendi harum facilis maiores laudantium optio temporibus nisi molestiae accusamus nulla facere? Totam ipsam distinctio perferendis, corporis itaque necessitatibus, dolor illo numquam aut aliquam asperiores, eius voluptatem magni labore temporibus amet nisi id doloremque deserunt ullam consectetur inventore esse neque. Iure sapiente quasi unde ex ipsa aliquid molestias perspiciatis, fugit omnis nesciunt! Consequuntur, nihil? Pariatur harum reiciendis illo repudiandae dolor nemo dicta fugit temporibus.</p>
+
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-links"onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab"id="skills">
+                        <ul>
+                            <li><span>Coding</span><br>DSA and competitive coding</li>
+                            <li><span>Web Devlopment</span><br>Web app Development</li>
+                            <li><span>Mean Stack</span><br>Designing Web interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents"id="education">
+                        <ul>
+                            <li><span>2017</span><br>10th from R.K + 2 High School Chhattarpur.</li>
+                            <li><span>2019</span><br>12th from R.K + 2 High School Chhattarpur.</li>
+                            <li><span>2024</span><br>B.Tech, CSE from IKGPTU,Amritsar Campus.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/work-1.png" alt="">
+                    <!-- <div class="layer">
+                        <h3>Social Media</h3>
+                        <p>It connects you to the talented people around the world.</p>
+                        <a href=""><i class="fa-sharp fa-solid fa-pen-to-square"></i></a>
+                    </div> -->
+                </div>
+                <div class="work">
+                    <img src="./images/work-2.png" alt="">
+                </div>
+                <div class="work">
+                    <img src="./images/work-3.png" alt="">
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="">Contact Me</h1>
+                    <p>arunkumaryadav6207@gmail.com</p>
+                    <p>6207687614</p>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit btn ">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-links");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
